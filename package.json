@@ -6,7 +6,7 @@
   "scripts": {
     "prepublish": "tsc"
   },
-  "author": "",
+  "author": "Fabiano Góes",
   "license": "ISC",
   "typings": "./ng2-translate.d.ts",
   "repository": {
