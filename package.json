@@ -1,18 +1,28 @@
 {
   "name": "ng-interceptor-security",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Interceptor Security to Angular 4 Projects",
   "main": "index.js",
   "scripts": {
     "prepublish": "tsc"
   },
   "author": "Fabiano Góes",
-  "license": "ISC",
+  "license": "MIT",
   "typings": "./ng2-translate.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/fabianogoes/ng-interceptor-security.git"
   },
+  "bugs": {
+    "url": "https://github.com/fabianogoes/ng-interceptor-security/issues"
+  },
+  "keywords": [
+    "Angular",
+    "Angular4",
+    "Interceptor",
+    "Security",
+    "Redirect"
+  ],
   "dependencies": {
     "@angular/animations": "^4.2.4",
     "@angular/common": "^4.2.4",
