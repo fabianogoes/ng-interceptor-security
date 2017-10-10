@@ -1,1 +1,1 @@
-export * from './src/interceprot-security.service';
+export * from './src/interceptor-security.service';
