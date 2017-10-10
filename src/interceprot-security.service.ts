@@ -6,9 +6,11 @@ import {SimpleGlobal} from 'ng2-simple-global';
 import 'rxjs/add/operator/do';
 
 @Injectable()
-export class InterceptorSecurityService {
+export class InterceptorSecurityService  implements HttpInterceptor {
 
-    constructor(private router: Router, private sg: SimpleGlobal) {}
+      constructor(private router: Router) {
+        console.log('InterceptorSecurityService - constructor()...');
+      }
     
       intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     
