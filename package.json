@@ -1,8 +1,8 @@
 {
   "name": "ng-interceptor-security",
-  "version": "1.0.5",
+  "version": "1.0.14",
   "description": "Interceptor Security to Angular 4 Projects",
-  "main": "index.js",
+  "main": "ng-interceptor-security.ts",
   "scripts": {
     "prepublish": "tsc"
   },
@@ -36,7 +36,6 @@
     "@types/core-js": "^0.9.43",
     "@types/zone.js": "^0.5.12",
     "core-js": "^2.4.1",
-    "ng2-simple-global": "^1.2.5",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },
