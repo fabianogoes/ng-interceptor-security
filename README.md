@@ -25,12 +25,15 @@ import { InterceptorSecurityService } from 'ng-interceptor-security';
 
 export class RedirectInterceptorService extends InterceptorSecurityService  {
 
+  private authorization = 'Basic 123456-123456';
+  private urlRedirect401 = '/login';
+  private headers = {
+    'Authorization': this.authorization,
+    'Content-Type': 'application/json'
+  };
+
   constructor(public router: Router) {
     super(router);
-  }
-
-  getUrlLoginRedirect(): string {
-    return '/login';
   }
 
 }

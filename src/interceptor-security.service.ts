@@ -7,20 +7,17 @@ import 'rxjs/add/operator/do';
 @Injectable()
 export abstract class InterceptorSecurityService implements HttpInterceptor {   
 
-    protected authorization?: string;
     protected urlRedirect401?: string;
+    protected headers = {
+      'Content-Type': 'application/json'
+    };    
 
     constructor(public router: Router) {
       console.log('InterceptorSecurityService - constructor()...');
     }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-      req = req.clone({
-        setHeaders: {
-          'Authorization': this.authorization,
-          'Content-Type': 'application/json'
-        }
-      });
+      req = req.clone({ setHeaders: this.headers });
       return next.handle(req).do((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
           console.log('InterceptorSecurityService - Request - OK');
